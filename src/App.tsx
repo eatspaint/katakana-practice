@@ -23,6 +23,14 @@ function checkAnswer(input: string, word: Word): boolean {
   );
 }
 
+function getFontSizeClass(text: string): string {
+  const len = text.length;
+  if (len <= 4) return "";
+  if (len <= 6) return "katakana-md";
+  if (len <= 8) return "katakana-sm";
+  return "katakana-xs";
+}
+
 function App() {
   const [wordQueue, setWordQueue] = useState<Word[]>(() => shuffleArray(words));
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -107,7 +115,7 @@ function App() {
       </div>
 
       <main className={`card ${correct ? "correct" : ""} ${shake ? "shake" : ""}`}>
-        <div className="katakana">{currentWord.katakana}</div>
+        <div className={`katakana ${getFontSizeClass(currentWord.katakana)}`}>{currentWord.katakana}</div>
 
         {currentWord.meaning && (correct || revealed) && (
           <div className="meaning">{currentWord.meaning}</div>

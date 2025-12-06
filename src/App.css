@@ -53,6 +53,22 @@
   font-family: "Hiragino Kaku Gothic Pro", "Yu Gothic", "Meiryo", sans-serif;
   line-height: 1.2;
   word-break: keep-all;
+  min-height: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.katakana-md {
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+}
+
+.katakana-sm {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+}
+
+.katakana-xs {
+  font-size: clamp(1.5rem, 6vw, 2.8rem);
 }
 
 .meaning {
