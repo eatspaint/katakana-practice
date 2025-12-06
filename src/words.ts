@@ -1,0 +1,170 @@
+export interface Word {
+  katakana: string;
+  romaji: string[];  // Multiple accepted spellings
+  meaning?: string;  // Optional English meaning
+}
+
+export const words: Word[] = [
+  // Food & Drinks
+  { katakana: "コーヒー", romaji: ["koohii", "ko-hi-"], meaning: "coffee" },
+  { katakana: "ビール", romaji: ["biiru", "bi-ru"], meaning: "beer" },
+  { katakana: "ワイン", romaji: ["wain"], meaning: "wine" },
+  { katakana: "ジュース", romaji: ["juusu", "ju-su"], meaning: "juice" },
+  { katakana: "ミルク", romaji: ["miruku"], meaning: "milk" },
+  { katakana: "パン", romaji: ["pan"], meaning: "bread" },
+  { katakana: "ケーキ", romaji: ["keeki", "ke-ki"], meaning: "cake" },
+  { katakana: "アイスクリーム", romaji: ["aisukuriimu", "aisukuri-mu"], meaning: "ice cream" },
+  { katakana: "チョコレート", romaji: ["chokoreeto", "tyokore-to", "chokore-to"], meaning: "chocolate" },
+  { katakana: "サラダ", romaji: ["sarada"], meaning: "salad" },
+  { katakana: "サンドイッチ", romaji: ["sandoicchi", "sandoitti"], meaning: "sandwich" },
+  { katakana: "ハンバーガー", romaji: ["hanbaagaa", "hanba-ga-"], meaning: "hamburger" },
+  { katakana: "ピザ", romaji: ["piza"], meaning: "pizza" },
+  { katakana: "パスタ", romaji: ["pasuta"], meaning: "pasta" },
+  { katakana: "ラーメン", romaji: ["raamen", "ra-men"], meaning: "ramen" },
+  { katakana: "カレー", romaji: ["karee", "kare-"], meaning: "curry" },
+  { katakana: "ステーキ", romaji: ["suteeki", "sute-ki"], meaning: "steak" },
+  { katakana: "チーズ", romaji: ["chiizu", "ti-zu", "chi-zu"], meaning: "cheese" },
+  { katakana: "バター", romaji: ["bataa", "bata-"], meaning: "butter" },
+  { katakana: "ソース", romaji: ["soosu", "so-su"], meaning: "sauce" },
+
+  // Technology
+  { katakana: "コンピューター", romaji: ["konpyuutaa", "konpyu-ta-"], meaning: "computer" },
+  { katakana: "インターネット", romaji: ["intaanetto", "inta-netto"], meaning: "internet" },
+  { katakana: "スマートフォン", romaji: ["sumaatofon", "suma-tofon"], meaning: "smartphone" },
+  { katakana: "テレビ", romaji: ["terebi"], meaning: "television" },
+  { katakana: "カメラ", romaji: ["kamera"], meaning: "camera" },
+  { katakana: "ラジオ", romaji: ["rajio"], meaning: "radio" },
+  { katakana: "ゲーム", romaji: ["geemu", "ge-mu"], meaning: "game" },
+  { katakana: "マウス", romaji: ["mausu"], meaning: "mouse" },
+  { katakana: "キーボード", romaji: ["kiiboodo", "ki-bo-do"], meaning: "keyboard" },
+  { katakana: "モニター", romaji: ["monitaa", "monita-"], meaning: "monitor" },
+  { katakana: "プリンター", romaji: ["purintaa", "purinta-"], meaning: "printer" },
+  { katakana: "ソフトウェア", romaji: ["sofutowea", "sofutouea"], meaning: "software" },
+  { katakana: "アプリ", romaji: ["apuri"], meaning: "app" },
+  { katakana: "データ", romaji: ["deeta", "de-ta"], meaning: "data" },
+  { katakana: "メール", romaji: ["meeru", "me-ru"], meaning: "email" },
+  { katakana: "パスワード", romaji: ["pasuwaado", "pasuwa-do"], meaning: "password" },
+  { katakana: "ウェブサイト", romaji: ["webusaito", "uebusaito"], meaning: "website" },
+
+  // Places & Travel
+  { katakana: "ホテル", romaji: ["hoteru"], meaning: "hotel" },
+  { katakana: "レストラン", romaji: ["resutoran"], meaning: "restaurant" },
+  { katakana: "デパート", romaji: ["depaato", "depa-to"], meaning: "department store" },
+  { katakana: "スーパー", romaji: ["suupaa", "su-pa-"], meaning: "supermarket" },
+  { katakana: "コンビニ", romaji: ["konbini"], meaning: "convenience store" },
+  { katakana: "エレベーター", romaji: ["erebeetaa", "erebe-ta-"], meaning: "elevator" },
+  { katakana: "エスカレーター", romaji: ["esukareetaa", "esukare-ta-"], meaning: "escalator" },
+  { katakana: "タクシー", romaji: ["takushii", "takusi-", "takushi-"], meaning: "taxi" },
+  { katakana: "バス", romaji: ["basu"], meaning: "bus" },
+  { katakana: "トイレ", romaji: ["toire"], meaning: "toilet" },
+  { katakana: "エアコン", romaji: ["eakon"], meaning: "air conditioning" },
+  { katakana: "アパート", romaji: ["apaato", "apa-to"], meaning: "apartment" },
+  { katakana: "マンション", romaji: ["manshon", "mansion"], meaning: "condominium" },
+  { katakana: "プール", romaji: ["puuru", "pu-ru"], meaning: "pool" },
+  { katakana: "ジム", romaji: ["jimu"], meaning: "gym" },
+
+  // Fashion & Items
+  { katakana: "シャツ", romaji: ["shatsu", "syatu", "shatu"], meaning: "shirt" },
+  { katakana: "ズボン", romaji: ["zubon"], meaning: "pants/trousers" },
+  { katakana: "スカート", romaji: ["sukaato", "suka-to"], meaning: "skirt" },
+  { katakana: "ジャケット", romaji: ["jaketto"], meaning: "jacket" },
+  { katakana: "コート", romaji: ["kooto", "ko-to"], meaning: "coat" },
+  { katakana: "ネクタイ", romaji: ["nekutai"], meaning: "necktie" },
+  { katakana: "バッグ", romaji: ["baggu"], meaning: "bag" },
+  { katakana: "ベルト", romaji: ["beruto"], meaning: "belt" },
+  { katakana: "アクセサリー", romaji: ["akusesarii", "akusesari-"], meaning: "accessory" },
+  { katakana: "サングラス", romaji: ["sangurasu"], meaning: "sunglasses" },
+  { katakana: "ブーツ", romaji: ["buutsu", "bu-tsu"], meaning: "boots" },
+  { katakana: "スニーカー", romaji: ["suniikaa", "suni-ka-"], meaning: "sneakers" },
+
+  // Entertainment & Sports
+  { katakana: "スポーツ", romaji: ["supootsu", "supo-tsu"], meaning: "sports" },
+  { katakana: "サッカー", romaji: ["sakkaa", "sakka-"], meaning: "soccer" },
+  { katakana: "バスケットボール", romaji: ["basukettobōru", "basukettobooru", "basukettoboru"], meaning: "basketball" },
+  { katakana: "テニス", romaji: ["tenisu"], meaning: "tennis" },
+  { katakana: "ゴルフ", romaji: ["gorufu"], meaning: "golf" },
+  { katakana: "マラソン", romaji: ["marason"], meaning: "marathon" },
+  { katakana: "コンサート", romaji: ["konsaato", "konsa-to"], meaning: "concert" },
+  { katakana: "ライブ", romaji: ["raibu"], meaning: "live (performance)" },
+  { katakana: "ドラマ", romaji: ["dorama"], meaning: "drama" },
+  { katakana: "アニメ", romaji: ["anime"], meaning: "anime" },
+  { katakana: "ニュース", romaji: ["nyuusu", "nyu-su"], meaning: "news" },
+  { katakana: "ギター", romaji: ["gitaa", "gita-"], meaning: "guitar" },
+  { katakana: "ピアノ", romaji: ["piano"], meaning: "piano" },
+
+  // Common Words
+  { katakana: "タイプ", romaji: ["taipu"], meaning: "type" },
+  { katakana: "サイズ", romaji: ["saizu"], meaning: "size" },
+  { katakana: "スタイル", romaji: ["sutairu"], meaning: "style" },
+  { katakana: "システム", romaji: ["shisutemu", "sisutemu"], meaning: "system" },
+  { katakana: "サービス", romaji: ["saabisu", "sa-bisu"], meaning: "service" },
+  { katakana: "メニュー", romaji: ["menyuu", "menyu-"], meaning: "menu" },
+  { katakana: "プレゼント", romaji: ["purezento"], meaning: "present/gift" },
+  { katakana: "メッセージ", romaji: ["messeeji", "messe-ji"], meaning: "message" },
+  { katakana: "グループ", romaji: ["guruupu", "guru-pu"], meaning: "group" },
+  { katakana: "チーム", romaji: ["chiimu", "ti-mu", "chi-mu"], meaning: "team" },
+  { katakana: "メンバー", romaji: ["menbaa", "menba-"], meaning: "member" },
+  { katakana: "リスト", romaji: ["risuto"], meaning: "list" },
+  { katakana: "ポイント", romaji: ["pointo"], meaning: "point" },
+  { katakana: "チェック", romaji: ["chekku", "tyekku"], meaning: "check" },
+  { katakana: "スタート", romaji: ["sutaato", "suta-to"], meaning: "start" },
+  { katakana: "ゴール", romaji: ["gooru", "go-ru"], meaning: "goal" },
+  { katakana: "チャンス", romaji: ["chansu", "tyansu"], meaning: "chance" },
+  { katakana: "トラブル", romaji: ["toraburu"], meaning: "trouble" },
+  { katakana: "ストレス", romaji: ["sutoresu"], meaning: "stress" },
+  { katakana: "エネルギー", romaji: ["enerugii", "enerugi-"], meaning: "energy" },
+  { katakana: "バランス", romaji: ["baransu"], meaning: "balance" },
+  { katakana: "リラックス", romaji: ["rirakkusu"], meaning: "relax" },
+
+  // Simple/Short Words (good for beginners)
+  { katakana: "ペン", romaji: ["pen"], meaning: "pen" },
+  { katakana: "カップ", romaji: ["kappu"], meaning: "cup" },
+  { katakana: "ドア", romaji: ["doa"], meaning: "door" },
+  { katakana: "ベッド", romaji: ["beddo"], meaning: "bed" },
+  { katakana: "テーブル", romaji: ["teeburu", "te-buru"], meaning: "table" },
+  { katakana: "ノート", romaji: ["nooto", "no-to"], meaning: "notebook" },
+  { katakana: "ページ", romaji: ["peeji", "pe-ji"], meaning: "page" },
+  { katakana: "クラス", romaji: ["kurasu"], meaning: "class" },
+  { katakana: "テスト", romaji: ["tesuto"], meaning: "test" },
+  { katakana: "レベル", romaji: ["reberu"], meaning: "level" },
+  { katakana: "キー", romaji: ["kii", "ki-"], meaning: "key" },
+  { katakana: "ボタン", romaji: ["botan"], meaning: "button" },
+  { katakana: "ガラス", romaji: ["garasu"], meaning: "glass" },
+  { katakana: "プラスチック", romaji: ["purasuchikku", "purasutikku"], meaning: "plastic" },
+  { katakana: "ゴミ", romaji: ["gomi"], meaning: "garbage" },
+  { katakana: "ボックス", romaji: ["bokkusu"], meaning: "box" },
+  { katakana: "カード", romaji: ["kaado", "ka-do"], meaning: "card" },
+  { katakana: "セット", romaji: ["setto"], meaning: "set" },
+  { katakana: "タイム", romaji: ["taimu"], meaning: "time" },
+  { katakana: "ナンバー", romaji: ["nanbaa", "nanba-"], meaning: "number" },
+
+  // More travel-relevant words
+  { katakana: "チケット", romaji: ["chiketto", "tiketto"], meaning: "ticket" },
+  { katakana: "パスポート", romaji: ["pasupooto", "pasupo-to"], meaning: "passport" },
+  { katakana: "ガイド", romaji: ["gaido"], meaning: "guide" },
+  { katakana: "ツアー", romaji: ["tsuaa", "tsua-"], meaning: "tour" },
+  { katakana: "マップ", romaji: ["mappu"], meaning: "map" },
+  { katakana: "フライト", romaji: ["furaito"], meaning: "flight" },
+  { katakana: "キャンセル", romaji: ["kyanseru"], meaning: "cancel" },
+  { katakana: "レシート", romaji: ["reshiito", "resiito", "reshi-to"], meaning: "receipt" },
+  { katakana: "クレジットカード", romaji: ["kurejittokādo", "kurejittokaado", "kurejittoka-do"], meaning: "credit card" },
+  { katakana: "キャッシュ", romaji: ["kyasshu", "kyashu"], meaning: "cash" },
+  { katakana: "トランク", romaji: ["toranku"], meaning: "trunk/suitcase" },
+  { katakana: "ロッカー", romaji: ["rokkaa", "rokka-"], meaning: "locker" },
+  { katakana: "フロント", romaji: ["furonto"], meaning: "front (desk)" },
+  { katakana: "ルーム", romaji: ["ruumu", "ru-mu"], meaning: "room" },
+  { katakana: "シングル", romaji: ["shinguru", "singuru"], meaning: "single" },
+  { katakana: "ダブル", romaji: ["daburu"], meaning: "double" },
+  { katakana: "ベジタリアン", romaji: ["bejitarian"], meaning: "vegetarian" },
+  { katakana: "アレルギー", romaji: ["arerugii", "arerugi-"], meaning: "allergy" },
+];
+
+// Shuffle utility
+export function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}

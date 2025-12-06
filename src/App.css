@@ -1,0 +1,189 @@
+/* WaniKani-inspired Katakana Drill Styles */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.stats {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.card {
+  background: linear-gradient(180deg, #aa00ff 0%, #9900e6 100%);
+  border-radius: 8px;
+  padding: 3rem 4rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.1s ease;
+  max-width: 90vw;
+  width: 500px;
+}
+
+.card.correct {
+  background: linear-gradient(180deg, #88cc00 0%, #7ab800 100%);
+}
+
+.card.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+  20%, 40%, 60%, 80% { transform: translateX(8px); }
+}
+
+.katakana {
+  font-size: clamp(3rem, 12vw, 6rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: "Hiragino Kaku Gothic Pro", "Yu Gothic", "Meiryo", sans-serif;
+  line-height: 1.2;
+  word-break: keep-all;
+}
+
+.meaning {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.hint {
+  font-size: 1rem;
+  color: rgba(255, 255, 200, 0.9);
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.8rem 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  outline: none;
+  transition: background 0.2s ease;
+  font-family: inherit;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.input-correct {
+  background: rgba(255, 255, 255, 0.3) !important;
+  color: #fff;
+  font-weight: 600;
+}
+
+.input-revealed {
+  background: rgba(255, 100, 100, 0.3);
+  color: #fff;
+}
+
+.answer {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.answer-label {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.answer-text {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.actions {
+  margin-top: 1.5rem;
+}
+
+.skip-button {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.skip-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.skip-button:active {
+  transform: scale(0.98);
+}
+
+.footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Dark mode adjustments (default is already dark) */
+@media (prefers-color-scheme: light) {
+  .stats {
+    color: #666;
+  }
+
+  .footer {
+    color: #999;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 600px) {
+  .card {
+    padding: 2rem 1.5rem;
+    width: 100%;
+  }
+
+  .input {
+    max-width: 100%;
+    font-size: 1.25rem;
+  }
+
+  .stats {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .footer {
+    font-size: 0.75rem;
+  }
+}
