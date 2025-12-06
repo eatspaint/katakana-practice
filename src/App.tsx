@@ -138,7 +138,9 @@ function App() {
             }`}
             autoComplete="off"
             autoCapitalize="off"
+            autoCorrect="off"
             spellCheck={false}
+            data-gramm="false"
             disabled={correct}
           />
         </form>

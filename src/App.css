@@ -101,6 +101,7 @@
   outline: none;
   transition: background 0.2s ease;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
 .input::placeholder {
@@ -185,13 +186,19 @@
 /* Mobile optimizations */
 @media (max-width: 600px) {
   .card {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1rem;
     width: 100%;
+    box-sizing: border-box;
   }
 
   .input {
     max-width: 100%;
     font-size: 1.25rem;
+    width: calc(100% - 1rem);
+  }
+
+  .katakana {
+    min-height: 5rem;
   }
 
   .stats {
